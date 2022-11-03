@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>빅스타 리조트</title>
+    <link href="./css/basic.css" rel="stylesheet"/>
+    <link href="./css/sitedeco.css" rel="stylesheet"/>
+    <link href="./css/tab.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" ></script>
+</head>
+<style>
+    .section {
+        height: 420px;
+        margin-top: 10px;
+    }
+    .left {
+        width: 200px;
+        float: left;
+        margin-left: 200px;
+    }
+    .right {
+        float: left;
+        width: 500px;
+        margin-left: 20px;
+        font-weight: 800;
+    }
+    .section img {
+        width: 400px;
+        height: 250px;
+    }
+    .section a {
+        font-weight: 800;
+    }
+    .tab_pages {
+        border: 1px solid black;
+    }
+    .left p {
+        font-weight: 800;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        $('.tabPage').hide();  //.tabPage로 지정된 항목 모두 감추기
+        $('#tabNav a').on('click', function(e){
+            $('#tabNav a.current').removeClass('current');
+            $('.tabPage:visible').hide();
+            $(this.hash).show() ;   // hash -  herf의 #을 의미, hash(#) 를 포함한 href속성
+            $(this).addClass('current');
+            e.prevetDefault;
+        }).filter(':first').click();
+    });
+</script>
+<body>
+    <div class="top_header">
+        <div class="logo">
+            <a href="index.html"><img src="./staricon/star-512.jpg">빅스타 리조트<img src="./staricon/star-512.jpg"></a>
+        </div>
+        <div class="top_nav">
+            <a href="reservation.html">예약하기</a>
+            <a href="#">오시는길</a>
+        </div>
+    </div>
+    <div class="menu">
+        <a href="room.html">객실</a>
+        <a href="food.html">식당가</a>
+        <a href="facility.html">부대시설</a>
+        <a href="service.html">서비스소개</a>
+        <a href="maps.html">오시는길</a>
+        <a href="community.html">후기</a>
+    </div>
+    <img src="./images/asparagus-gd64e3fd4d_1920.jpg">
+    <div class="section">
+        <div class="tab_container">
+            <ul id="tabNav">
+                <li><a href="#tabPage_1">향미궁</a></li>
+                <li><a href="#tabPage_2">창화루</a></li>
+                <li><a href="#tabPage_3">미도 스시</a></li>
+                <li><a href="#tabPage_4">웰링 가든</a></li>
+            </ul>
+            <div class="tab_pages">
+                <div class="tabPage" id="tabPage_1">
+                    <div class="left">
+                        <p><br>
+                            운영시간: 8:30~11:00<br><br>
+                            종류: 한식<br><br>
+                            좌석수: 100석<br><br>
+                            연락처: 011-222-3333<br><br>
+                            장소: 2층
+                        </p>
+                    </div>
+                    <div class="right">
+                        <img src="./images/koreanfood-g80fa5da79_1920.jpg">
+                    </div>
+                </div>
+                <div class="tabPage" id="tabPage_2">
+                    <div class="left">
+                        <p><br>
+                            운영시간: 8:30~11:00<br><br>
+                            종류: 중식<br><br>
+                            좌석수: 150석<br><br>
+                            연락처: 011-333-4444<br><br>
+                            장소: 2층
+                        </p>
+                    </div>
+                    <div class="right">
+                        <img src="./images/chengdu-ge740bd21c_1920.jpg">
+                    </div>
+                </div>
+                <div class="tabPage" id="tabPage_3">
+                    <div class="left">
+                        <p><br>
+                            운영시간: 8:30~11:00<br><br>
+                            종류: 일식<br><br>
+                            좌석수: 80석<br><br>
+                            연락처: 011-444-5555<br><br>
+                            장소: 2층
+                        </p>
+                    </div>
+                    <div class="right">
+                        <img src="./images/sushi-gd5433bb25_1920.jpg">
+                    </div>
+                </div>
+                <div class="tabPage" id="tabPage_4">
+                    <div class="left">
+                        <p><br>
+                            운영시간: 8:30~11:00<br><br>
+                            종류: 양식<br><br>
+                            좌석수: 180석<br><br>
+                            연락처: 011-555-6666<br><br>
+                            장소: 2층
+                        </p>
+                    </div>
+                    <div class="right">
+                        <img src="./images/food-g4416edf66_1920.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_nav">
+            <div class="footer_list">
+                <ul>
+                    <li> ▶ 상호명: 빅스타 리조트</li>
+                    <li> ▶ 대표: 박태성</li>
+                    <li> ▶ 전화번호: 012-2345-5678</li>
+                    <li> ▶ 사업자등록번호: 000-1111-33333</li>
+                    <li> ▶ 계좌번호: 기업은행 | 123-3456-6789-90</li>
+                    <li> ▶ 주소: 강원도 삼척시 인덕면</li>
+                </ul>
+            </div>
+            <div class="icon_content">
+                <div class="icon">
+                    <a href="index.html"><img src="./images/home.png"></a>
+                    <a href="room.html"><img src="./images/bed.png"></a>
+                    <a href="food.html"><img src="./images/restaurant.png"></a><br>
+                    <a href="facility.html"><img src="./images/building.png"></a>
+                    <a href="maps.html"><img src="./images/maps-and-flags.png"></a>
+                    <a href="community.html"><img src="./images/support.png"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

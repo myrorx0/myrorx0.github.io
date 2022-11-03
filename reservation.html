@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>빅스타 리조트</title>
+    <link href="./css/basic.css" rel="stylesheet"/>
+    <link href="./css/sitedeco.css" rel="stylesheet"/>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        margin: 20px;
+    }
+    table {
+        margin: 15px 0px;
+        margin-left: 220px;
+        border-spacing: 10px;
+        border-radius: 20px;
+        border: none;
+    }
+    td {
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+    }
+    .td1 {
+        background-color: greenyellow;
+        text-align: center;
+        font-weight: 800;
+    }
+    .td2 {
+        margin-left: 40px;
+        background-color: gainsboro;
+        line-height: 10px;
+        width: 410px;
+    }
+    .check {
+        margin: 5px;
+    }
+    .phone {
+        width: 45px;
+    }
+    .bd {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .button {
+        background-color: white;
+        width: 90px;
+        height: 30px;
+        background-color: aquamarine;
+        border-radius: 10px;
+        border: none;
+        font-weight: 800;
+    }
+    .button:hover {
+        background-color: olivedrab;
+    }
+    img {
+        width: 960px;
+        height: 250px;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <div class="top_header">
+        <div class="logo">
+            <a href="index.html"><img src="./staricon/star-512.jpg">빅스타 리조트<img src="./staricon/star-512.jpg"></a>
+        </div>
+        <div class="top_nav">
+            <a href="reservation.html">예약하기</a>
+            <a href="maps.html">오시는길</a>
+        </div>
+    </div>
+    <div class="menu">
+        <a href="room.html">객실</a>
+        <a href="food.html">식당가</a>
+        <a href="facility.html">부대시설</a>
+        <a href="service.html">서비스소개</a>
+        <a href="maps.html">오시는길</a>
+        <a href="community.html">후기</a>
+    </div>
+    <img src="./images/receptionists-gbb599193f_1920.jpg">
+    <div class="section">
+        <h1>예약하기</h1>
+        <form action="" method="post" name="member" id="member">
+        <table border="1">
+            <tr>
+                <td class="td1">이름</td>
+                <td class="td2"><input type="text" name="name" id="name" class="name"></td>
+            </tr>
+            <tr>
+                <td class="td1">전화번호</td>
+                <td class="td2"><input type="text" name="phone1" id="phone1" class="phone">-
+                    <input type="text" name="phone1" id="phone1" class="phone">-
+                    <input type="text" name="phone1" id="phone1" class="phone"></td>
+            </tr>
+            <tr>
+                <td class="td1">체크인</td>
+                <td class="td2"><input type="date" name="date" id="date"></td>
+            </tr>
+            <tr>
+                <td class="td1">체크아웃</td>
+                <td class="td2"><input type="date" name="date" id="date"></td>
+            </tr>
+            <tr>
+                <td class="td1">사람 수</td>
+                <td class="td2">
+                    <select>
+                        <option selected>2인</option>
+                        <option>3인</option>
+                        <option>4인</option>
+                        <option>4인 이상</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="td1">서비스이용</td>
+                <td class="td2">
+                    <input type="checkbox" name="activity" id="activity">스킨스쿠버
+                    <input type="checkbox" name="activity" id="activity" class="check">저녁바베큐
+                    <input type="checkbox" name="activity" id="activity" class="check">디너쇼
+                    <input type="checkbox" name="activity" id="activity" class="check">실내클라이밍
+                </td>
+            </tr>
+        </table>
+        <div class="bd">
+            <input type="submit" name="submit" id="submit" value="예약하기" class="button">
+            <input type="reset" name="reset" id="reset" value="취소" class="button">
+        </div>
+        </form>
+        </div>
+    </div>
+    <footer>
+       <div class="footer_nav">
+        <div class="footer_list">
+            <ul>
+                <li>▶ 상호명: 빅스타 리조트</li>
+                <li>▶ 대표: 박태성</li>
+                <li>▶ 전화번호: 012-2345-5678</li>
+                <li>▶ 사업자등록번호: 000-1111-33333</li>
+                <li>▶ 계좌번호: 기업은행 | 123-3456-6789-90</li>
+                <li> ▶ 주소: 강원도 삼척시 인덕면</li>
+            </ul>
+        </div>
+        <div class="icon_content">
+            <div class="icon">
+                <a href="index.html"><img src="./images/home.png"></a>
+                <a href="room.html"><img src="./images/bed.png"></a>
+                <a href="food.html"><img src="./images/restaurant.png"></a><br>
+                <a href="facility.html"><img src="./images/building.png"></a>
+                <a href="maps.html"><img src="./images/maps-and-flags.png"></a>
+                <a href="community.html"><img src="./images/support.png"></a>
+            </div>
+        </div>
+       </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+.top_header {
+    width: 960px;
+    height: 120px;  /*수정할 부분*/
+    position: relative;
+}
+.logo {
+    position: absolute;
+    left: 285px;  /*수정할 부분*/
+    bottom: 20px; /*수정할 부분*/
+}
+.logo>a {
+    display: inline-block;
+    width: 960px; /*수정할 부분*/
+    height: 30px; /*수정할 부분*/
+    font-size: 45px;  /*수정할 부분*/
+}
+.logo img {
+    display: inline-block;
+    width: 45px;  /*수정할 부분*/
+    height: 45px;  /*수정할 부분*/
+    margin: 0px 5px;
+}
+.top_nav {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.top_nav>a {
+    display: inline-block;
+    padding: 0px 10px;
+    font-weight: 700;
+}
+.menu {
+    width: 960px;
+    height: 30px;
+    background-color: green;
+    text-align: center;
+    line-height: 30px;
+}
+.menu>a {
+    display: inline-block;
+    font-size: 15px;
+    color: white;
+    margin: 0px 15px;
+    font-weight: 800;
+}
+.menu>a:hover {
+    color: orange;
+}
+.section {
+    width: 960px;
+}
+footer {
+    width: 960px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.footer_nav {
+    width: 960px;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.footer_list {
+    float: left;
+    width: 450px;
+    height: 150px;
+    padding: 5px 15px;
+}
+.icon_content {
+    float: left;
+    width: 450px;
+    height: 150px;
+}
+.icon>a{
+    display: inline-block;
+}
+.icon img {
+    width: 45px;
+    height: 45px;
+    padding: 5px 10px;
+}
+img {
+    width: 960px;
+    height: 250px;
+    margin-top: 10px;
+}

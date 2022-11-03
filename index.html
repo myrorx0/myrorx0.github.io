@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>빅스타 리조트</title>
+    <link href="./css/basic.css" rel="stylesheet"/>
+</head>
+<style>
+    .top_header {
+        width: 960px;
+        height: 120px;  /*수정할 부분*/
+        position: relative;
+    }
+    .logo {
+        position: absolute;
+        left: 285px;  /*수정할 부분*/
+        bottom: 20px; /*수정할 부분*/
+    }
+    .logo>a {
+        display: inline-block;
+        width: 960px; /*수정할 부분*/
+        height: 30px; /*수정할 부분*/
+        font-size: 45px;  /*수정할 부분*/
+    }
+    .logo img {
+        display: inline-block;
+        width: 45px;  /*수정할 부분*/
+        height: 45px;  /*수정할 부분*/
+        margin: 0px 5px;
+    }
+    .top_nav {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    .top_nav>a {
+        display: inline-block;
+        padding: 0px 10px;
+        font-weight: 700;
+    }
+    .menu {
+        width: 960px;
+        height: 30px;
+        background-color: green;
+        text-align: center;
+        line-height: 30px;
+    }
+    .menu>a {
+        display: inline-block;
+        font-size: 15px;
+        color: white;
+        margin: 0px 15px;
+        font-weight: 800;
+    }
+    .menu>a:hover {
+        color: orange;
+    }
+    .section {
+        width: 960px;
+        height: 280px;
+    }
+    .section img {
+        width: 900px;
+        height: 350px;
+        padding: 30px;
+    }
+    footer {
+        width: 960px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .footer_nav {
+        width: 960px;
+        height: 150px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    .footer_list {
+        float: left;
+        width: 450px;
+        height: 150px;
+        padding: 5px 15px;
+    }
+    .icon_content {
+        float: left;
+        width: 450px;
+        height: 150px;
+    }
+    .icon>a{
+        display: inline-block;
+    }
+    .icon img {
+        width: 45px;
+        height: 45px;
+        padding: 5px 10px;
+    }
+    img {
+    width: 960px;
+    height: 250px;
+    margin-top: 10px;
+    }
+    .h1 {
+        margin: 35px;
+    }
+</style>
+<body>
+    <div class="top_header">
+        <div class="logo">
+            <a href="index.html"><img src="./staricon/star-512.jpg">빅스타 리조트<img src="./staricon/star-512.jpg"></a>
+        </div>
+        <div class="top_nav">
+            <a href="reservation.html">예약하기</a>
+            <a href="maps.html">오시는길</a>
+        </div>
+    </div>
+    <div class="menu">
+        <a href="room.html">객실</a>
+        <a href="room.html">식당가</a>
+        <a href="facility.html">부대시설</a>
+        <a href="service.html">서비스소개</a>
+        <a href="maps.html">오시는길</a>
+        <a href="community.html">후기</a>
+    </div>
+    <img src="./images/singapore-ged0764587_1920.jpg">
+    <div class="section">
+        <div class="h1">
+        <h1>어서오세요!</h1>
+        <h1>빅스타 리조트에 오신 것을 </h1>
+        <h1>환영합니다!</h1>
+        <h1>즐거운 시간 보네세요!</h1>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_nav">
+        <div class="footer_list">
+            <ul>
+                <li>▶ 상호명: 빅스타 리조트</li>
+                <li>▶ 대표: 박태성</li>
+                <li>▶ 전화번호: 012-2345-5678</li>
+                <li>▶ 사업자등록번호: 000-1111-33333</li>
+                <li>▶ 계좌번호: 기업은행 | 123-3456-6789-90</li>
+                <li> ▶ 주소: 강원도 삼척시 인덕면</li>
+            </ul>
+        </div>
+        <div class="icon_content">
+            <div class="icon">
+                <a href="index.html"><img src="./images/home.png"></a>
+                <a href="room.html"><img src="./images/bed.png"></a>
+                <a href="food.html"><img src="./images/restaurant.png"></a><br>
+                <a href="facility.html"><img src="./images/building.png"></a>
+                <a href="maps.html"><img src="./images/maps-and-flags.png"></a>
+                <a href="community.html"><img src="./images/support.png"></a>
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>빅스타 리조트</title>
+    <link href="./css/basic.css" rel="stylesheet"/>
+    <link href="./css/sitedeco.css" rel="stylesheet"/>
+    <link href="./css/tab.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" ></script>
+</head>
+<style>
+    .section {
+        height: 420px;
+        margin-top: 10px;
+    }
+    .left {
+        width: 400px;
+        float: left;
+        margin-left: 10px;
+    }
+    .right {
+        float: left;
+        width: 500px;
+        margin-left: 20px;
+        font-weight: 800;
+    }
+    .section img {
+        width: 600px;
+        height: 250px;
+    }
+    .section a {
+        font-weight: 800;
+    }
+    .tabs{
+        margin-left: 100px;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        $('.tabPage').hide();  //.tabPage로 지정된 항목 모두 감추기
+        $('#tabNav a').on('click', function(e){
+            $('#tabNav a.current').removeClass('current');
+            $('.tabPage:visible').hide();
+            $(this.hash).show() ;   // hash -  herf의 #을 의미, hash(#) 를 포함한 href속성
+            $(this).addClass('current');
+            e.prevetDefault;
+        }).filter(':first').click();
+    });
+
+</script>
+<body>
+    <div class="top_header">
+        <div class="logo">
+            <a href="index.html"><img src="./staricon/star-512.jpg">빅스타 리조트<img src="./staricon/star-512.jpg"></a>
+        </div>
+        <div class="top_nav">
+            <a href="reservation.html">예약하기</a>
+            <a href="maps.html">오시는길</a>
+        </div>
+    </div>
+    <div class="menu">
+        <a href="room.html">객실</a>
+        <a href="food.html">식당가</a>
+        <a href="facility.html">부대시설</a>
+        <a href="service.html">서비스소개</a>
+        <a href="maps.html">오시는길</a>
+        <a href="community.html">후기</a>
+    </div>
+    <img src="./images/shopping-mall-g8c5358605_1920.jpg">
+    <div class="section">
+        <div class="tab_container">
+            <ul id="tabNav">
+                <li><a href="#tabPage_1">CU</a></li>
+                <li><a href="#tabPage_2">스타벅스</a></li>
+                <li><a href="#tabPage_3">기념품샵</a></li>
+                <li><a href="#tabPage_4">실내수영장</a></li>
+                <li><a href="#tabPage_5">오락실</a></li>
+                <li><a href="#tabPage_6">노래방</a></li>
+            </ul>
+            <div class="tab_pages">
+                <div class="tabPage" id="tabPage_1">
+                    <div class="tabs">
+                        "언제나 CU 어게인!!!"<br>
+                        <img src="./images/building-g17cc6b63f_1920.jpg"><br>
+                        운영시간 : 연중무휴<br>
+                        문의처: 055-067-0789<br>
+                        장소: 1층 로비
+                    </div>
+                </div>
+                <div class="tabPage" id="tabPage_2">
+                    <div class="tabs">
+                        "커피 한 잔의 여유 스타벅스에서~~~"<br>
+                        <img src="./images/cafe-gfd8b8d4b3_1920.jpg"><br>
+                        운영시간 : 9:30~10:00<br>
+                        문의처: 056-047-0719<br>
+                        장소: 2층 식당가 옆
+                    </div>
+                </div>
+                <div class="tabPage" id="tabPage_3">
+                    <div class="tabs">
+                        "추억을 기념하며......."<br>
+                        <img src="./images/background-gc6bdc242c_1920.jpg"><br>
+                        운영시간 : 8:00~9:00<br>
+                        문의처: 045-077-1789<br>
+                        장소: 지하 1층
+                    </div>
+                </div>
+                <div class="tabPage" id="tabPage_4">
+                    <div class="tabs">
+                        "계절에 상관없이 물놀이를 즐기세요~~!!!"<br>
+                        <img src="./images/swimmers-g5c16762d9_1920.jpg"><br>
+                        운영시간 : 9:00~7:00<br>
+                        문의처: 011-033-0555<br>
+                        장소: 지하 2층
+                    </div>
+                </div>
+                <div class="tabPage" id="tabPage_5">
+                    <div class="tabs">
+                        "즐겁게, 짜릿하게 즐기고 싶다면 게임랜드로 오세요!"<br>
+                        <img src="./images/child-gfaa6c1a12_1920.jpg"><br>
+                        운영시간 : 8:00~10:00<br>
+                        문의처: 055-066-0777<br>
+                        장소: 지하 1층
+                    </div>
+                </div>
+                <div class="tabPage" id="tabPage_6">
+                    <div class="tabs">
+                        "가왕을 꿈꾼다면 팡팡 노래방으로~!"<br>
+                        <img src="./images/ktv-room-g83cec4830_1920.jpg"><br>
+                        운영시간 : 6:00~12:00<br>
+                        문의처: 044-022-0111<br>
+                        장소: 지하 1층
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_nav">
+            <div class="footer_list">
+                <ul>
+                    <li> ▶ 상호명: 빅스타 리조트</li>
+                    <li> ▶ 대표: 박태성</li>
+                    <li> ▶ 전화번호: 012-2345-5678</li>
+                    <li> ▶ 사업자등록번호: 000-1111-33333</li>
+                    <li> ▶ 계좌번호: 기업은행 | 123-3456-6789-90</li>
+                    <li> ▶ 주소: 강원도 삼척시 인덕면</li>
+                </ul>
+            </div>
+            <div class="icon_content">
+                <div class="icon">
+                    <a href="index.html"><img src="./images/home.png"></a>
+                    <a href="room.html"><img src="./images/bed.png"></a>
+                    <a href="food.html"><img src="./images/restaurant.png"></a><br>
+                    <a href="facility.html"><img src="./images/building.png"></a>
+                    <a href="maps.html"><img src="./images/maps-and-flags.png"></a>
+                    <a href="community.html"><img src="./images/support.png"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

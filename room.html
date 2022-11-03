@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>빅스타 리조트</title>
+    <link href="./css/basic.css" rel="stylesheet"/>
+    <link href="./css/sitedeco.css" rel="stylesheet"/>
+    <link href="./css/tab.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" ></script>
+</head>
+<style>
+    .section {
+        height: 1320px;
+        margin-top: 10px;
+    }
+    .left{
+        margin-top: 10px;
+        float: left;
+        width: 350px;
+    }
+    
+    .right{
+        margin-top: 10px;
+        float: left;
+        width: 350px;
+    }
+    .section img {
+        width: 300px;
+        height: 300px;
+        margin: 5px;
+    }
+    .section a {
+        font-weight: 800;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    th{
+        width: 300px;
+        padding: 5px;
+    }
+    td {
+        width: 300px;
+        padding: 5px;
+    }
+    .tab_pages {
+        border: 1px solid black;
+        height: 550px;
+    }
+    .tabPage{ 
+        margin : 5px;
+        padding : 5px;
+    }
+    p {
+        margin-left: 5px;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        $('.tabPage').hide();  //.tabPage로 지정된 항목 모두 감추기
+        $('#tabNav a').on('click', function(e){
+            $('#tabNav a.current').removeClass('current');
+            $('.tabPage:visible').hide();
+            $(this.hash).show() ;   // hash -  herf의 #을 의미, hash(#) 를 포함한 href속성
+            $(this).addClass('current');
+            e.prevetDefault;
+        }).filter(':first').click();
+    });
+</script>
+<body>
+    <div class="top_header">
+        <div class="logo">
+            <a href="index.html"><img src="./staricon/star-512.jpg">빅스타 리조트<img src="./staricon/star-512.jpg"></a>
+        </div>
+        <div class="top_nav">
+            <a href="reservation.html">예약하기</a>
+            <a href="maps.html">오시는길</a>
+        </div>
+    </div>
+    <div class="menu">
+        <a href="room.html">객실</a>
+        <a href="food.html">식당가</a>
+        <a href="facility.html">부대시설</a>
+        <a href="service.html">서비스소개</a>
+        <a href="maps.html">오시는길</a>
+        <a href="community.html">후기</a>
+    </div>
+    <img src="./images/bedroom-gf58dcc6dd_1280.jpg">
+    <div class="section">
+        <br>
+        <h2>Check In</h2>
+        <table border="1">
+            <tr>
+                <th>구분</th>
+                <th>입실 시간</th>
+            </tr>
+            <tr>
+                <td>성수기, 주말, 연휴</td>
+                <td>15:00~22:00</td>
+            </tr>
+            <tr>
+                <td>비수기, 평일</td>
+                <td>14:00~22:00</td>
+            </tr>
+        </table><br>
+        <h2>Check Out</h2>
+        <table border="1">
+            <tr>
+                <th>구분</th>
+                <th>퇴실 시간</th>
+            </tr>
+            <tr>
+                <td>성수기, 주말, 연휴</td>
+                <td>11:00</td>
+            </tr>
+            <tr>
+                <td>비수기, 평일</td>
+                <td>12:00</td>
+            </tr>
+        </table><br>
+        <h2>정원</h2>
+        <table border="1">
+            <tr>
+                <th>구분</th>
+                <th>정원</th>
+            </tr>
+            <tr>
+                <td>브론즈</td>
+                <td>2인</td>
+            </tr>
+            <tr>
+                <td>실버</td>
+                <td>4인</td>
+            </tr>
+            <tr>
+                <td>골드</td>
+                <td>6인</td>
+            </tr>
+        </table><br>
+        <h2>추가인원(간이침대)</h2>
+        <table border="1">
+            <tr>
+                <th>구분</th>
+                <th>최대 추가인원</th>
+            </tr>
+            <tr>
+                <td>브론즈</td>
+                <td>1인</td>
+            </tr>
+            <tr>
+                <td>실버</td>
+                <td>2인</td>
+            </tr>
+            <tr>
+                <td>골드</td>
+                <td>3인</td>
+            </tr>
+        </table>
+        ※간이 침대는 한 사람당 추가비용 20000원<br>
+        <div class="tab_container">
+            <ul id="tabNav">
+                <li><a href="#tabPage_1">브론즈</a></li>
+                <li><a href="#tabPage_2">실버</a></li>
+                <li><a href="#tabPage_3">골드</a></li>
+            </ul>
+            <div class="tab_pages">
+                <div class="tabPage" id="tabPage_1">
+                    <img src="./images/to-travel-g5065496bf_1920.jpg"><img src="./images/garlic-gcc3ef3289_1920.jpg"><img src="./images/bathroom-g89d350746_1920.jpg">
+                    <p><br>
+                        가격: 290000원<br>
+                        실내구성: 거실 겸 침실, 부엌, 화장실+샤워부스<br>
+                        면적: 108.14㎡<br>
+                        객실 수: 161<br>
+                        가구: 침대(양실), 식탁, 쇼파, 화장대, 티테이블<br>
+                        가전: LED TV, 전화기, 냉장고, 에어컨, 헤어드라이기, 밥솥, 전기 레인지<br>
+                        식기: 접시(대,중,소), 머그컵, 과도, 오프너, 포크<br>
+                        세면도구: 타올, 비누, 샴푸, 바디숍
+                    </p>
+                </div>
+                <div class="tabPage" id="tabPage_2">
+                    <img src="./images/apartment-g4bcc82f4d_1920.jpg"><img src="./images/architecture-g16262d46a_1920.jpg"><img src="./images/bathroom-g5204906f5_1920.jpg">
+                    <p><br>
+                        가격: 550000원<br>
+                        실내구성: 침실2 + 거실 + 화장실2 ( 샤워부스1 + 욕조1)<br>
+                        면적: 156.11㎡<br>
+                        객실 수: 91<br>
+                        가구: 침대(양실), 식탁, 쇼파, 화장대, 티테이블<br>
+                        가전: LED TV, 전화기, 냉장고, 에어컨, 헤어드라이기, 밥솥, 전기 레인지<br>
+                        식기: 접시(대,중,소), 머그컵, 과도, 오프너, 포크<br>
+                        세면도구: 타올, 비누, 샴푸, 바디숍
+                    </p>
+                </div>
+                <div class="tabPage" id="tabPage_3">
+                    <img src="./images/bedroom-gc3e423c9c_1920.jpg"><img src="./images/home-g4740973ce_1920.jpg"><img src="./images/bathroom-g390efa7f0_1280.png">
+                    <p><br>
+                        가격: 600000원<br>
+                        실내구성: 침실3 + 거실 + 화장실2 + 샤워부스 + 욕조<br>
+                        면적: 205.39㎡<br>
+                        객실 수: 14<br>
+                        가구: 침대(양실), 식탁, 쇼파, 화장대, 티테이블<br>
+                        가전: LED TV, 전화기, 냉장고, 에어컨, 헤어드라이기, 밥솥, 전기 레인지<br>
+                        식기: 접시(대,중,소), 머그컵, 과도, 오프너, 포크<br>
+                        세면도구: 타올, 비누, 샴푸, 바디숍<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+       <div class="footer_nav">
+        <div class="footer_list">
+            <ul>
+                <li>▶ 상호명: 빅스타 리조트</li>
+                <li>▶ 대표: 박태성</li>
+                <li>▶ 전화번호: 012-2345-5678</li>
+                <li>▶ 사업자등록번호: 000-1111-33333</li>
+                <li>▶ 계좌번호: 기업은행 | 123-3456-6789-90</li>
+                <li> ▶ 주소: 강원도 삼척시 인덕면</li>
+            </ul>
+        </div>
+        <div class="icon_content">
+            <div class="icon">
+                <a href="index.html"><img src="./images/home.png"></a>
+                <a href="room.html"><img src="./images/bed.png"></a>
+                <a href="food.html"><img src="./images/restaurant.png"></a><br>
+                <a href="facility.html"><img src="./images/building.png"></a>
+                <a href="maps.html"><img src="./images/maps-and-flags.png"></a>
+                <a href="community.html"><img src="./images/support.png"></a>
+            </div>
+        </div>
+       </div>
+    </footer>
+</body>
+</html>

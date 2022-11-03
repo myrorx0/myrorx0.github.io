@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>빅스타 리조트</title>
+    <link href="./css/basic.css" rel="stylesheet"/>
+    <link href="./css/sitedeco.css" rel="stylesheet"/>
+    <link href="./css/tab.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" ></script>
+</head>
+<style>
+    .section {
+        height: 420px;
+        margin-top: 10px;
+    }
+    .left {
+        width: 400px;
+        float: left;
+        margin-left: 10px;
+    }
+    .right {
+        float: left;
+        width: 500px;
+        margin-left: 20px;
+        font-weight: 800;
+    }
+    .section img {
+        width: 400px;
+        height: 300px;
+    }
+    .section a {
+        font-weight: 800;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        $('.tabPage').hide();  //.tabPage로 지정된 항목 모두 감추기
+        $('#tabNav a').on('click', function(e){
+            $('#tabNav a.current').removeClass('current');
+            $('.tabPage:visible').hide();
+            $(this.hash).show() ;   // hash -  herf의 #을 의미, hash(#) 를 포함한 href속성
+            $(this).addClass('current');
+            e.prevetDefault;
+        }).filter(':first').click();
+    });
+</script>
+<body>
+    <div class="top_header">
+        <div class="logo">
+            <a href="index.html"><img src="./staricon/star-512.jpg">빅스타 리조트<img src="./staricon/star-512.jpg"></a>
+        </div>
+        <div class="top_nav">
+            <a href="reservation.html">예약하기</a>
+            <a href="#">오시는길</a>
+        </div>
+    </div>
+    <div class="menu">
+        <a href="room.html">객실</a>
+        <a href="food.html">식당가</a>
+        <a href="facility.html">부대시설</a>
+        <a href="service.html">서비스소개</a>
+        <a href="maps.html">오시는길</a>
+        <a href="community.html">후기</a>
+    </div>
+    <img src="./images/audience-g8aa835761_1920.jpg">
+    <div class="section">
+        <div class="tab_container">
+            <ul id="tabNav">
+                <li><a href="#tabPage_1">스킨스쿠버 체험</a></li>
+                <li><a href="#tabPage_2">클라이밍 체험</a></li>
+                <li><a href="#tabPage_3">저녁 바베큐</a></li>
+                <li><a href="#tabPage_4">디너쇼</a></li>
+            </ul>
+            <div class="tab_pages">
+                <div class="tabPage" id="tabPage_1">
+                    <div class="left">
+                        <img src="./images/blue-water-g88c8be4c5_1920.jpg">
+                    </div>
+                    <div class="right">
+                        <p><br>
+                            --실내 스쿠버풀장에서 즐기는 안전한 스킨스쿠버 체험--<br><br>
+                            체험시간: 1시간<br><br>
+                            운영시간<br>
+                            - 오전: 9:00~10:00, 11:00~12:00<br>
+                            - 오후: 2:00~3:00, 4:00~5:00<br><br>
+                            요금<br>
+                            - 성인(100000원), 청소년(80000원), 13세 이하(50000원)<br><br>
+                            장소: 지하 2층
+                        </p>
+                    </div>
+                </div>
+                <div class="tabPage" id="tabPage_2">
+                    <div class="left">
+                        <img src="./images/climbing-gb31525852_1920.jpg">
+                    </div>
+                    <div class="right">
+                        <p><br>
+                            --실내에서도 즐기는 암벽등반 체험--<br><br>
+                            체험시간: 1시간<br><br>
+                            가이드 운영시간<br>
+                            - 오전: 9:00~10:00, 11:00~12:00<br>
+                            - 오후: 2:00~3:00, 4:00~5:00<br><br>
+                            요금<br>
+                            - 성인(100000원), 청소년(80000원), 13세 이하(50000원)<br><br>
+                            장소: 2층
+                        </p>
+                    </div>
+                </div>
+                <div class="tabPage" id="tabPage_3">
+                    <div class="left">
+                        <img src="./images/braai-gf2877ab64_1920.jpg">
+                    </div>
+                    <div class="right">
+                        <p><br>
+                            --기대되는 저녁 바베큐 파티--<br><br>
+                            영업시간: 6:00~9:00<br><br>
+                            요금<br>
+                            - 1인당 50000원<br><br>
+                            장소: 야외 그릴장
+                        </p>
+                    </div>
+                </div>
+                <div class="tabPage" id="tabPage_4">
+                    <div class="left">
+                        <img src="./images/concert-gd5728e5f6_1280.jpg">
+                    </div>
+                    <div class="right">
+                        <p><br>
+                            --신나는 디너쇼--<br><br>
+                            공연시간: 8:00~10:00<br><br>
+                            공연순서<br>
+                            - 탭댄스<br>
+                            - 마술쇼<br>
+                            - 라이브 공연<br><br>
+                            요금<br>
+                            - 1인당 50000원<br><br>
+                            장소: 1층 야외 공연장
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_nav">
+            <div class="footer_list">
+                <ul>
+                    <li> ▶ 상호명: 빅스타 리조트</li>
+                    <li> ▶ 대표: 박태성</li>
+                    <li> ▶ 전화번호: 012-2345-5678</li>
+                    <li> ▶ 사업자등록번호: 000-1111-33333</li>
+                    <li> ▶ 계좌번호: 기업은행 | 123-3456-6789-90</li>
+                    <li> ▶ 주소: 강원도 삼척시 인덕면</li>
+                </ul>
+            </div>
+            <div class="icon_content">
+                <div class="icon">
+                    <a href="index.html"><img src="./images/home.png"></a>
+                    <a href="room.html"><img src="./images/bed.png"></a>
+                    <a href="food.html"><img src="./images/restaurant.png"></a><br>
+                    <a href="facility.html"><img src="./images/building.png"></a>
+                    <a href="maps.html"><img src="./images/maps-and-flags.png"></a>
+                    <a href="community.html"><img src="./images/support.png"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
